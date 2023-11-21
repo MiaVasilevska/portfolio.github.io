@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Personal Portfolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function() {
+        emailjs.init ("user_pdByzEMSsRVfAeA0uOccz");
+        })();
+        </script>
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <span class="loader"><span class="inner loader"></span></span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#aboutMe">About Me</a></li>
+        <li><a href="index.html#contactMe">Contact Me</a></li>
+        <div class="icons">
+        <div id="menu-bars" class="fas fa-bars"></div>
+        <a href="login.html" target="_blank" class="fas fa-user"></a>
+        <a class="fas fa-solid fa-moon" id="icon"></a>
+      </div>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <div class="home">
+        <div class="text-box">
+          <h1>Mia Vasilevska</h1>
+          <p>Web Developer</p>
+          <div class="boxy">
+            <a href="#projects">
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h1 class="heading">Projects</h1>
+      <div class="stolperstein">
+        <div class="stolpersteinAbout">
+          <h1>Stolperstein App</h1>
+          <p>
+            An app created to collect and display information about all the Dutch and Belgian Stolpersteine.
+          </p>
+          <button
+            onclick="window.location.href='https://industry.fhict-dev.com/';">
+            Visit Website
+          </button>
+        </div>
+        <div class="stolpersteinLogo">
+          <img src="images/stolperstein.png" height="800rem" />
+        </div>
+      </div>
+      <div class="digitalDream">
+        <div class="digitalDreamLogo">
+          <img src="images/digitaldream.png" height="800rem" />
+        </div>
+        <div class="digitalDreamAbout">
+          <h1>Student Corner</h1>
+          <p>
+            A website created to assist students in staying focused and
+            organized while studying
+          </p>
+          <button 
+          onclick="window.location.href='https://studentcorner.onrender.com/';"
+          >Visit Website</button>
+        </div>
+      </div>
+      <div class="maaike">
+        <div class="maaikeAbout">
+          <h1>Maaike's Portfolio</h1>
+          <p>
+            A website created to introduce Maaike Geraldine to potential fans
+            and collaborators
+          </p>
+          <button
+            onclick="window.location.href='https://miavasilevska.github.io/Maaike-website.github.io/';"
+          >
+            Visit Website
+          </button>
+        </div>
+        <div class="maaikeLogo">
+          <img src="images/maaike.png" height="800rem" />
+        </div>
+      </div>
+      <div class="housing">
+        <div class="housingLogo">
+          <img src="images/housing.png" height="800rem" />
+        </div>
+        <div class="housingAbout">
+          <h1>EasyAccommodation</h1>
+          <p>
+            Website designed for students looking for accommodation in Eindhoven
+          </p>
+          <button
+            onclick="window.location.href='https://miavasilevska.github.io/EasyAccommodation-website/'"
+          >
+            Visit Website
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutMe" class="aboutMe">
+        <h1>About Me</h1>
+        <p>
+          My name is Mia Vasilevska, I'm 20 years old, and I'm from Bulgaria.<br />
+          I'm now studying in the third semester at Fontys University of
+          Applied<br />
+          Sciences. I chose the Media Design profile for a number of
+          reasons,<br />
+          one of which is my passion for designing beautiful-looking
+          websites.<br />
+          I am interested in web development and would like to broaden and<br />
+          deepen my knowledge there. I would like to experiment and explore
+          <br />
+          new technologies I have not yet worked with.
+        </p>
+        
+        <form method="get" action="images/cv.png">
+          <button type="submit">My CV</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contactMe" class="contactMe">
+        <h1>Contact Me</h1>
+        <div class="messagebox">
+          <form method="get" action="#popup4">
+            <div class="inputBox">
+              <input id="fname" type="text" name="fname" placeholder="First Name" required>
+              <input id="lname" type="text" placeholder="Last Name" required>
+              <input id="email"
+                type="email"
+                placeholder="example@example.com"
+                required="required"
+                minlength="4"
+              />
+              <input id="subject" type="text" placeholder="Subject" required="required" />
+            </div>
+            <textarea
+            id="message"
+              name=""
+              placeholder="Your Message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <p><input 
+               onclick="sendMail()" id="submitbtn" type="submit" class="btn" value="Send Message"></input></p>
+            <div id="popup4" class="overlay">
+              <div class="popup">
+                <h2>Your message was successfully sent!</h2>
+                <a href="index.html" class="btn">Go Back</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <footer>
+          <button class="topBtn">^</button>
+        </footer>
+    </section>
+
+    <footer class="footer"></footer>
+
+    <script src="topbutton.js"></script>
+    <script src="contactForm.js"></script>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <!-- <script>
+    var btn = document.getElementById("submitbtn");
+    btn.addEventListener('click', function(e){
+        e.preventDefault()
+        var firstName = document.getElementById('fname').value
+        var lastName = document.getElementById('lname').value
+        var email = document.getElementById('email').value
+        var subject = document.getElementById('subject').value
+        var message = document.getElementById('message').value
+        var body = 'First Name:' + firstName + '<br/> Last Name:' + lastName + '<br/> Email:' + email + '<br/> Subject:' + subject + '<br/> Message:' + message;
+
+
+                        Email.send({
+                    SecureToken : "36f897cb-95f9-4e55-9cfc-76df980c88fc",
+                    Host: "smtp.elasticemail.com",  // Update with your SMTP provider's host
+                     Username: "princessmiav@gmail.com",  // Update with your email address
+                     Password: "tennis1540", 
+                    To : 'miavasilevska03@gmail.com',
+                    From : "princessmiav@gmail.com",
+                    Subject : "contact form",
+                    Body : body
+                }).then(
+                message => alert(message)
+                );
+
+    })
+  </script> -->
+  </body>
+</html>

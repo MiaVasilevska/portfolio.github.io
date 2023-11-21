@@ -1,0 +1,552 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+:root /* directory of colors */ {
+  --black: #070707;
+  --white: #fffdf7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* SECTION SETTINGS */
+section {
+  height: 100%;
+  overflow: hidden;
+}
+
+#home {
+  z-index: 0;
+  min-height: 120vh;
+  background: url("images/me.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#aboutMe {
+  z-index: 0;
+  min-height: 120vh;
+  background: url("images/aboutMe.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  margin-left: 3%;
+}
+
+#projects {
+  z-index: 0;
+  height: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#contactMe {
+  z-index: 0;
+  height: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+/* END OF PART */
+
+/* NAV BAR SETTINGS */
+nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background: transparent;
+}
+
+nav ul {
+  float: right;
+  margin-right: 80px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 17px;
+  padding: 7px 13px;
+  text-transform: uppercase;
+}
+
+a:hover,
+a.active {
+  background: none;
+  color: rgb(171, 79, 139);
+}
+/* END OF PART */
+
+/* homePAGE SETTINGS */
+.text-box {
+  width: 90%;
+  color: var(--black);
+  position: absolute;
+  top: 45%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-family: var(--black);
+  font-size: 62px;
+  margin: 0;
+}
+
+.text-box p {
+  font-family: var(--black);
+  font-size: 30px;
+  margin: 10px 0 20px;
+}
+
+.boxy {
+  position: absolute;
+  top: 200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.boxy span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid #070707;
+  border-right: 5px solid #070707;
+  transform: rotate(45deg);
+  animation: animate 2s infinite;
+}
+
+.boxy span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.boxy span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+/* END OF PART */
+
+/* start of second part */
+
+.heading {
+  text-align: center;
+  color: var(--black);
+  font-size: 4rem;
+  padding-bottom: 3rem;
+  z-index: 2;
+  text-align: center;
+}
+
+
+
+.stolperstein {
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+  font-family: var(--black);
+  top: 200%;
+  /* border: #070707 solid; */
+  display: flex;
+  font-weight: normal;
+}
+
+.stolpersteinLogo {
+  color: var(--black);
+  position: relative;
+  text-align: right;
+  /* border: black solid; */
+}
+
+.stolpersteinAbout {
+  color: black;
+  text-align: left;
+  top: 50%;
+  position: relative;
+  font-size: 30px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 15%;
+  font-weight: normal;
+}
+
+.stolpersteinAbout h1 {
+  margin-bottom: 8%;
+}
+
+.stolpersteinAbout p {
+  color: rgb(146, 146, 146);
+}
+
+.stolpersteinAbout button {
+  width: 50%;
+  margin-top: 15%;
+  margin-left: 25%;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 12px;
+  background: rgb(146, 146, 146);
+  color: var(--white);
+  padding: 12px 34px;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+.stolpersteinAbout button:hover {
+  background: rgb(93, 93, 93);
+  color: var(--white);
+}
+
+
+
+.digitalDream {
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+  font-family: var(--black);
+  top: 215%;
+  /* border: #070707 solid; */
+  display: flex;
+  font-weight: normal;
+}
+
+.digitalDreamLogo {
+  color: var(--black);
+  text-align: left;
+  top: 50%;
+  position: relative;
+}
+
+.digitalDreamAbout {
+  color: black;
+  text-align: left;
+  top: 50%;
+  position: relative;
+  font-size: 30px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 15%;
+  font-weight: normal;
+}
+
+.digitalDreamAbout h1 {
+  margin-bottom: 8%;
+}
+
+.digitalDreamAbout p {
+  color: rgb(146, 146, 146);
+}
+
+.digitalDreamAbout button {
+  width: 50%;
+  margin-top: 15%;
+  margin-left: 25%;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 12px;
+  background: rgb(146, 146, 146);
+  color: var(--white);
+  padding: 12px 34px;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+.digitalDreamAbout button:hover {
+  background: rgb(93, 93, 93);
+  color: var(--white);
+}
+
+.maaike {
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+  font-family: var(--black);
+  top: 200%;
+  /* border: #070707 solid; */
+  display: flex;
+  font-weight: normal;
+}
+
+.maaikeLogo {
+  color: var(--black);
+  position: relative;
+  text-align: right;
+  /* border: black solid; */
+}
+
+.maaikeAbout {
+  color: black;
+  text-align: left;
+  top: 50%;
+  position: relative;
+  font-size: 30px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 15%;
+  font-weight: normal;
+}
+
+.maaikeAbout h1 {
+  margin-bottom: 8%;
+}
+
+.maaikeAbout p {
+  color: rgb(146, 146, 146);
+}
+
+.maaikeAbout button {
+  width: 50%;
+  margin-top: 15%;
+  margin-left: 25%;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 12px;
+  background: rgb(146, 146, 146);
+  color: var(--white);
+  padding: 12px 34px;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+.maaikeAbout button:hover {
+  background: rgb(93, 93, 93);
+  color: var(--white);
+}
+
+.housing {
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+  font-family: var(--black);
+  top: 300%;
+  /* border: #070707 solid; */
+  display: flex;
+  font-weight: normal;
+}
+
+.housingLogo {
+  color: var(--black);
+  text-align: left;
+  top: 50%;
+  position: relative;
+}
+
+.housingAbout {
+  color: black;
+  text-align: left;
+  top: 50%;
+  position: relative;
+  font-size: 30px;
+  padding-left: 7%;
+  padding-right: 4%;
+  padding-top: 15%;
+  font-weight: normal;
+}
+
+.housingAbout h1 {
+  margin-bottom: 8%;
+}
+
+.housingAbout p {
+  color: rgb(146, 146, 146);
+}
+
+.housingAbout button {
+  width: 50%;
+  margin-top: 15%;
+  margin-left: 25%;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 12px;
+  background: rgb(146, 146, 146);
+  color: var(--white);
+  padding: 12px 34px;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+.housingAbout button:hover {
+  background: rgb(93, 93, 93);
+  color: var(--white);
+}
+/* end of second part */
+
+/* start of third part */
+
+.aboutMe {
+  width: 100%;
+  color: var(--black);
+  position: absolute;
+  top: 615%;
+  text-align: left;
+}
+.aboutMe h1 {
+  top: 10%;
+  width: 80%;
+  font-size: 62px;
+  color: var(--black);
+  position: absolute;
+  text-align: left;
+  margin-left: 20%;
+}
+
+.aboutMe p {
+  font-family: var(--black);
+  font-size: 27px;
+  margin-top: 13%;
+  margin-right: 30%;
+  color: rgb(93, 93, 93);
+}
+
+.aboutMe button {
+  width: 10%;
+  margin-top: 5%;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 12px;
+  background: rgb(146, 146, 146);
+  color: var(--white);
+  padding: 12px 34px;
+  font-size: 25px;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+}
+.aboutMe button:hover {
+  background: rgb(93, 93, 93);
+  color: var(--white);
+}
+/* end of part */
+
+/* start of contact me */
+
+.heading2 {
+  margin-top: 13%;
+  width: 100%;
+  color: var(--black);
+  position: absolute;
+  top: 670%;
+  text-align: left;
+  background-color: white;
+}
+
+.contactMe h1 {
+  width: 100%;
+  font-size: 62px;
+  color: var(--black);
+  /* position: absolute; */
+  text-align: center;
+  /* background-color: white; */
+  /* margin-bottom: 10px; */
+}
+
+.contactMe {
+  margin-top: 80%;
+}
+
+.contactMe .messagebox {
+  background: white;
+  border: 0.1rem solid white;
+  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding: 1rem;
+}
+
+.contactMe .messagebox form {
+  flex: 1 1 50rem;
+  padding: 0.5rem 1rem;
+}
+
+.contactMe .messagebox form .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contactMe .messagebox form textarea,
+.contactMe .messagebox form .inputBox input {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: #000;
+  background: rgb(246, 246, 246);
+  border-radius: 0.5rem;
+  text-transform: none;
+  width: 49%;
+}
+
+.contactMe .messagebox form textarea {
+  width: 100%;
+  height: 20rem;
+  resize: none;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  color: black;
+  background: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background: rgb(146, 146, 146);
+  border: rgb(146, 146, 146);
+  color: white;
+}
+
+.topBtn {
+  background-color: rgb(146, 146, 146);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 48px;
+  width: 48px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.showBtn:hover {
+  background: white;
+  color: black;
+}
